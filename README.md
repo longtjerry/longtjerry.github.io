@@ -1,2 +1,2 @@
-# tyleransom.github.io
-Repository for Tyler Ransom's academic research website.
+# longtjerry.github.io
+Repository for Teng LONG's academic research website.
