@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,7 +35,7 @@
     <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
+
     <style>
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -78,24 +77,86 @@
         flex-wrap: wrap;
         justify-content: space-between;
       }
+
+      /* 头像样式 - 与Index页一致 */
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 图片保护容器 - 关键样式 */
+      .protected-img-container {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      /* 透明覆盖层防止右键保存 */
+      .protected-img-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 10;
+        cursor: default;
+      }
+
+      .protected-img-container img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* 全局禁止选中文本和图片 */
+      body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 允许选中文本区域 */
+      section p, section h1, section h2, section h3, section a {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
     </style>
-  </head>
+  <base target="_blank">
+</head>
   <body>
     <div class="wrapper">
       <header>
+        <!-- 头像 - 与Index页一致，添加保护容器 -->
+          <img src="profile.jpg" alt="Teng LONG" class="profile-photo">
+
+
         <h1>Teng LONG, Ph.D</h1>
         <p><font size=2><i class="fa-solid fa-map-pin"></i> Hong Kong, China</font></p>
         <p>Postdoc Researcher in Virology<br><a href="https://www.hku.hk/">University of Hong Kong (HKU)</a></p>
-        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br><br>
+        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br>
     <h3><a href="https://longtjerry.github.io/">Home</a></h3>
     <h3><a href="https://longtjerry.github.io/index_CN">主頁</a></h3>
     <h3><a href="https://longtjerry.github.io/CV.html">About me</a></h3>
     <h3><a href="https://longtjerry.github.io/research.html">Research</a></h3> 
     <h3><a href="https://longtjerry.github.io/publications.html">Publications</a></h3>
-    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br><br>
-    
-    
-        
+    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br>
+
+
+
     <b>Social</b><br>
         <div class="social-row">
           <a href="mailto: jerrylongt302@gmail.com" class="author-social" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
@@ -107,9 +168,9 @@
         </div>
         <br>
     <p><b>Contact:</b><br>6/F, School of Public Health<br>Li Ka Shing Faculty of Medicine<br>21 Sassoon Road<br>Pok Fu Lam, Hong Kong Island</p><br>
-          
+
       </header>
-        
+
       <section>
     <!-- No R&Rs or WPs at the moment
     <h2><a id="recent-RRs-updated" class="anchor" href="#RRpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers under Revision to Resubmit</h2>
@@ -122,10 +183,10 @@
 
     <hr>                    
     -->
-            
+
     <h1><b>About me</b></h1> 
     <br>
-          
+
       <h3>Educations</h3>
           <p><i class="fa-solid fa-graduation-cap"></i>2017-2021, PhD Student, Microbiology<br> <font size=2 color=grey> The Chinese University of Hong Kong</font></p>
           <p><i class="fa-solid fa-graduation-cap"></i>2014-2017, Master Student, Preventive Veterinary Medicine<br> <font size=2 color=grey>South China Agricutural University</font></p>
@@ -133,9 +194,11 @@
     <br>
       <h3>Appointments</h3>
           <p><i class="fa-solid fa-microscope"></i>2024-present, Postdoctoral Fellow<br><font size=2 color=grey>School of Public Health, University of Hong Kong<br>Centre for Immunology &amp; Infection</font></p>
-        <p><i class="fa-solid fa-microscope"></i>2021-2023, Postdoctoral Fellow<br><font size=2 color=grey>Dept. of Microbiology, University of Hong Kong<br>Centre for Virology, Vaccinology and Therapeutics</font></p>
-          
-          
+          <p><i class="fa-solid fa-microscope"></i>2021-2023, Postdoctoral Fellow<br><font size=2 color=grey>Dept. of Microbiology, University of Hong Kong<br>Centre for Virology, Vaccinology and Therapeutics</font></p>
+    <br>
+      <h3>Professional Recognitions</h3>
+          <p><i class="fa-solid fa-landmark"></i>Board of Honorary Advisors<br><font size=2 color=grey>Hong Kong Life Sciences Application Association (HKLSAA)</font></p>
+
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
@@ -149,6 +212,21 @@
             this.parentNode.nextElementSibling.classList.toggle("show");
       }
     }
+
+    // 禁止右键保存图片（保护头像）
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // 禁止拖拽图片
+    document.addEventListener('dragstart', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
     </script>
   </body>
 </html>

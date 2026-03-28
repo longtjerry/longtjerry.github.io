@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,7 +35,7 @@
     <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
+
     <style>
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -54,7 +53,7 @@
       }
       button.accordion:after {
       content: " [+] ";
-      font-size: 90%
+      font-size: 90%;
       color:#777;
       float: left;
       margin-left: 1px;
@@ -78,24 +77,89 @@
         flex-wrap:wrap;
         justify-content: space-between;
       }
+
+      /* 头像样式 - 与Index页一致 */
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 图片保护容器 - 关键样式 */
+      .protected-img-container {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        margin: 10px 0;
+      }
+
+      /* 透明覆盖层防止右键保存 */
+      .protected-img-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 10;
+        cursor: default;
+      }
+
+      .protected-img-container img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      /* 全局禁止选中文本和图片 */
+      body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 允许选中文本区域 */
+      section p, section h1, section h2, section a {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
     </style>
-  </head>
+  <base target="_blank">
+</head>
   <body>
     <div class="wrapper">
       <header>
+        <!-- 头像 - 与Index页一致，添加保护容器 -->
+        
+        <img src="profile.jpg" alt="Teng LONG" class="profile-photo">
+        
+
         <h1>Teng LONG, Ph.D</h1>
         <p><font size=2><i class="fa-solid fa-map-pin"></i> Hong Kong, China</font></p>
         <p>Postdoc Researcher in Virology<br><a href="https://www.hku.hk/">University of Hong Kong (HKU)</a></p>
-        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br><br>
+        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br>
     <h3><a href="https://longtjerry.github.io/">Home</a></h3>
     <h3><a href="https://longtjerry.github.io/index_CN">主頁</a></h3>
     <h3><a href="https://longtjerry.github.io/CV.html">About me</a></h3>
     <h3><a href="https://longtjerry.github.io/research.html">Research</a></h3>   
     <h3><a href="https://longtjerry.github.io/publications.html">Publications</a></h3>
-    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br><br>
-    
-    
-        
+    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br>
+
+
+
     <b>Social</b><br>
         <div class="social-row">
           <a href="mailto: jerrylongt302@gmail.com" class="author-social" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
@@ -107,39 +171,34 @@
         </div>
         <br>
     <p><b>Contact:</b><br>6/F, School of Public Health<br>Li Ka Shing Faculty of Medicine<br>21 Sassoon Road<br>Pok Fu Lam, Hong Kong Island</p><br>
-          
+
       </header>
-        
+
       <section>
-    <!-- No R&Rs or WPs at the moment
-    <h2><a id="recent-RRs-updated" class="anchor" href="#RRpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers under Revision to Resubmit</h2>
-    <p style="margin:0"> Coming soon. <br> <br> 
-
-    <hr>
-
-    <h2><a id="recent-papers-updated" class="anchor" href="#workingpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Papers</h2>
-    <p style="margin:0"> Coming soon. <br> <br> 
-
-    <hr>                    
-    -->
     <h1><b>Research projects</b></h1><br> 
     <h2><i class="fa-solid fa-virus"></i><b>Emerging Viruses Disease</b></h2>Coming soon. <br>
     <h2><i class="fa-solid fa-virus"></i><b>Molecular Evolution of Primate Papillomaviruses</b></h2>Hundreds of papillomavirus (PVs) genotype were characterized so far, but as we know, merely 13 human types were officially determined as high-risk types, which may cause cervical cancer. With curiosity to understand the genetic origin of such high-risk HPVs, my PhD study illustrated genomic diversity of non-human primate PVs and demonstrated that non-human primate PVs were sharing similar evolutionary history with HPVs. And Using E6-mediated p53 degradation as a model, I clarified the evolutionary relatedness of the carcinogenicity of human and non-human primate PVs, which provided the genetic proof of carcinogenic origin and further suggested the potentials of cross-species carcinogenic abilities of PVs<br>
     <br><p><font size=3><i class="fa-solid fa-circle fa-2xs"></i> Novel papillomaviruses discovery</font><br>
-        <img src="../research/1_novel%20genome.jpg" height="auto" width="auto" alt="Genome of Novel PVs"><br><font size=2 ><div align="right"><u><a style="color: black" href="https://journals.asm.org/doi/10.1128/mra.01414-18">Long T,et al</a></u></div></font>
+        <div class="protected-img-container">
+          <img src="./research/1_novel%20genome.jpg" height="auto" width="auto" alt="Genome of Novel PVs">
+        </div><br><font size=2 ><div align="right"><u><a style="color: black" href="https://journals.asm.org/doi/10.1128/mra.01414-18">Long T,et al</a></u></div></font>
           We characterized the genome of the six novel <i>Macaca mulatta</i> PVs isolated from genital sites of rhesus monkeys that distributed in Hong Kong. Six novel genomes were named MmPV2 to MmPV7. The complete genome sequences of MmPV2 to MmPV7 were submitted to NCBI/GenBank under the accession numbers <a href="https://www.ncbi.nlm.nih.gov/nuccore/MG837557">MG837557</a> to <a href="https://www.ncbi.nlm.nih.gov/nuccore/MG837559">MG837559</a> and <a href="https://www.ncbi.nlm.nih.gov/nuccore/MH745747">MH745747</a> to <a href="https://www.ncbi.nlm.nih.gov/nuccore/MH745749">MH745749</a>. The phylogenetic tree was deposited in <a href="https://doi.org/10.6084/m9.figshare.7301432">figshare</a>.</p>
     <br><p><font size=3><i class="fa-solid fa-circle fa-2xs"></i> Genomic evolution relationship of primate PVs</font><br>
-          <img src="../research/1_evolution.jpg" height="auto" width="auto" alt="Evolution history"><br><font size=2 ><div align="right"><u><a style="color: black" href="https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02093/full">Chen Z,et al</a></u></div></font>
+          <div class="protected-img-container">
+            <img src="./research/1_evolution.jpg" height="auto" width="auto" alt="Evolution history">
+          </div><br><font size=2 ><div align="right"><u><a style="color: black" href="https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02093/full">Chen Z,et al</a></u></div></font>
           Our study supported the fact that the multiple PV ancestors had split and adapted to specific host niches within an ancestral host animal lineage, prior to the host speciation events. Following the subsequent divergence and niche adaptation, distinct but phylogenetically related PV types were transmitted to similar host ecosystems by closely related host animals when the host speciation occurred.</p>
     <br><p><font size=3><i class="fa-solid fa-circle fa-2xs"></i> Evolutionary carcinogenicity of primate PVs</font><br>
-          <img src="../research/1_carcinogenicity.jpg" height="auto" width="auto" alt="Evolution history"><br><font size=2 ><div align="right"><u><a style="color: black" href="https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1010444">Long T,et al</a></u></div></font>
+          <div class="protected-img-container">
+            <img src="./research/1_carcinogenicity.jpg" height="auto" width="auto" alt="Evolution history">
+          </div><br><font size=2 ><div align="right"><u><a style="color: black" href="https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1010444">Long T,et al</a></u></div></font>
           We used E6-mediated p53 degradation as an <i>in vitro</i> model to support our observation that the most recent common ancestor of high-risk PV types has likely acquired phenotypic traits of carcinogenicity before speciation of host animals. However, the loss-of-function mechanism might be able to explain the formation of a host species barrier in carcinogenicty or even defective phenotypic traits.</p>
     <h2><i class="fa-solid fa-virus"></i><b>Rabies Virus and Blood-brain Barrier</b></h2>
-        <img src="../research/2_rabies.jpg" height="auto" width="auto" alt="Rabies"><br>
+        <div class="protected-img-container">
+          <img src="./research/2_rabies.jpg" height="auto" width="auto" alt="Rabies">
+        </div><br>
           Rabies virus (RABV) infects hosts, most mammals, from the peripheral bite. Following the commencement of primary amplification in bite site, the infecting viruses adapted to peripheral nerve, and march to central nervous system (CNS). The hosts will be saved when the neutralizing antibodies manage to reach the brain tissue, from peripheral blood through blood-brain barrier (BBB). To understand the fatality of street RABV strain, we evaluated the genetic function of RABV phosphoprotein on BBB. Our study suggested that the phosphoprotein of lethal RABV strain plays as a role in lowering the enhancement of BBB permeability. <font size=2 ><u><a style="color: black" href="https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2020.00109/full">Long T,et al</a></u></font>
-   
-          
-          
+
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>
@@ -153,6 +212,21 @@
             this.parentNode.nextElementSibling.classList.toggle("show");
       }
     }
+
+    // 禁止右键保存图片（保护头像和研究图片）
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // 禁止拖拽图片
+    document.addEventListener('dragstart', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
     </script>
   </body>
 </html>

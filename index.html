@@ -78,24 +78,92 @@
         flex-wrap: wrap;
         justify-content: space-between;
       }
+
+      /* 头像样式 - 新增 */
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                /* 禁止保存图片相关 */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;  /* 阻止鼠标事件 */
+      }
+         /* 主页图片边框样式 - 新增 */
+      .guidance {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #e0e0e0;        /* 浅灰色边框 */
+        border-radius: 12px;               /* 圆角 */
+        padding: 8px;                      /* 内边距 */
+        background-color: #fff;            /* 白色背景 */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);  /* 轻微阴影 */
+        margin-bottom: 20px;               /* 下方间距 */
+        transition: all 0.3s ease;         /* 平滑过渡 */
+           /* 禁止保存图片相关 */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;  /* 阻止鼠标事件 */
+      }
+       .img-container {
+        position: relative;
+        display: inline-block;
+      }
+         .img-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 10;
+      }
+
+      /* 全局禁止选中文本和图片 */
+      body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 允许选中文本区域（可选） */
+      section p, section h2, section a {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+      
     </style>
-  </head>
-    
+  <base target="_blank">
+</head>
+
   <body>
     <div class="wrapper">
       <header>
+          <!-- 头像移到左上角 -->
+          <img src="profile.jpg" alt="Teng LONG" class="profile-photo">
           <h1>Teng LONG, Ph.D</h1>
           <p><font size=2><i class="fa-solid fa-map-pin"></i> Hong Kong, China</font></p>
         <p>Postdoc Researcher in Virology<br><a href="https://www.hku.hk/">University of Hong Kong (HKU)</a></p>
-        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br><br>
+        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br>
     <h3><a href="https://longtjerry.github.io/">Home</a></h3>
     <h3><a href="https://longtjerry.github.io/index_CN">主頁</a></h3>
     <h3><a href="https://longtjerry.github.io/CV.html">About me</a></h3>
     <h3><a href="https://longtjerry.github.io/research.html">Research</a></h3> 
     <h3><a href="https://longtjerry.github.io/publications.html">Publications</a></h3>
-    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br><br>
-    
-        
+    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br>
+
+
     <b>Social</b><br>
         <div class="social-row">
           <a href="mailto: jerrylongt302@gmail.com" class="author-social" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
@@ -107,15 +175,15 @@
         </div>
         <br>
     <p><b>Contact:</b><br>6/F, School of Public Health<br>Li Ka Shing Faculty of Medicine<br>21 Sassoon Road<br>Pok Fu Lam, Hong Kong Island</p><br>
-          
+
       </header>
-        
+
       <section>
-      <img src="profile.jpg" height="auto" width="auto" alt="Teng LONG">
+      <img src="work%20flow.png" alt="workflow" class="guidance" width="auto" height="auto">
       <h2>Welcome!</h2>
       <p>I am currently a Postdoctoral Researcher of Virology at the <a href="https://sph.hku.hk/">School of Public Health</a>, <a href="https://www.hku.hk/">University of Hong Kong (HKU)</a>, and a Research Fellow at the <a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a>.  I graduated with a PhD in <a href="https://mic.cuhk.edu.hk/">Microbiology</a> from <a href="https://www.cuhk.edu.hk/english/">Chinese University of Hong Kong (CUHK)</a> in May 2021.</p>
-      <p>My research interests focus on topic of viral cross-species transmission , origins of zoonosis and emerging epidemics, which includes but not limited to viral genomics and evolution, molecular mechanism of viral-host interaction, viral pathogenesis. My research was published in leading journals such as <i>PloS Pathogens</i>, <i>Nature Communications</i>, <i>Frontiers in Microbiology</i>, <i>Viruses </i> and <i>etc.</i>. I am passionate about combining dry and wet methodologies in virology research. I also have advanced language skills in Chinese Mandarin, Cantonese and English. </p>
-      <p>Welcome scientists with different disciplinary backgrounds to collaborate and exchange ideas. </p> 
+      <p>My research integrates in silico approaches (bioinformatics, computational genomics) with in vitro/vivo models to analyze viral evolution, understand host responses, and inform public health strategies. The ultimate goal is to help develop optimized, precise therapeutics grounded in solid science. My research was published in leading journals such as <i>PloS Pathogens</i>, <i>Nature Communications</i>, <i>Frontiers in Microbiology</i>, <i>Viruses </i> and <i>etc.</i>.</p>
+      <p>I am passionate about translating laboratory discoveries into real-world applications—bridging the gap between academia, industry, and clinical settings. Welcome scientists with different disciplinary backgrounds to collaborate and exchange ideas. </p> 
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>

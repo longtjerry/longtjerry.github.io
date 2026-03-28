@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,7 +35,7 @@
     <!-- For all browsers -->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
-    
+
     <style>
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -78,22 +77,103 @@
         flex-wrap: wrap;
         justify-content: space-between;
       }
+
+      /* 头像样式 - 与Index页一致 */
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        /* 禁止保存图片相关 */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;  /* 阻止鼠标事件 */
+      }
+
+      /* 图片保护容器 - 关键样式 */
+      .img-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .img-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 10;
+      }
+
+      /* 全局禁止选中文本和图片 */
+      body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 允许选中文本区域（可选） */
+      section p, section h1, section h2, section h3, section a {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+
+      /* 美化Publication样式 */
+      section h3 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+        margin-top: 30px;
+      }
+
+      section p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      section a {
+        color: #2980b9;
+        text-decoration: none;
+      }
+
+      section a:hover {
+        text-decoration: underline;
+      }
+
+      .panel {
+        border-left: 3px solid #3498db;
+        background-color: #f8f9fa !important;
+      }
     </style>
-  </head>
+  <base target="_blank">
+<base target="_blank">
+</head>
   <body>
     <div class="wrapper">
       <header>
+        <!-- 头像 - 与Index页一致 -->
+        <img src="profile.jpg" alt="Teng LONG" class="profile-photo">
+
         <h1>Teng LONG, Ph.D</h1>
         <p><font size=2><i class="fa-solid fa-map-pin"></i> Hong Kong, China</font></p>
         <p>Postdoc Researcher in Virology<br><a href="https://www.hku.hk/">University of Hong Kong (HKU)</a></p>
-        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br><br>
+        <p>Research Fellow <br><a href="https://www.c2i.hk/">Centre for Immunology &amp; Infection (C2I)</a></p><br>
     <h3><a href="https://longtjerry.github.io/">Home</a></h3>
     <h3><a href="https://longtjerry.github.io/index_CN">主頁</a></h3>
     <h3><a href="https://longtjerry.github.io/CV.html">About me</a></h3>
     <h3><a href="https://longtjerry.github.io/research.html">Research</a></h3> 
     <h3><a href="https://longtjerry.github.io/publications.html">Publications</a></h3>
-    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br><br>
-        
+    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br>
+
     <b>Social</b><br>
         <div class="social-row">
           <a href="mailto: jerrylongt302@gmail.com" class="author-social" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
@@ -105,9 +185,9 @@
         </div>
         <br>
     <p><b>Contact:</b><br>6/F, School of Public Health<br>Li Ka Shing Faculty of Medicine<br>21 Sassoon Road<br>Pok Fu Lam, Hong Kong Island</p><br>
-    
+
       </header>
-        
+
       <section>
     <!-- No R&Rs or WPs at the moment
     <h2><a id="recent-RRs-updated" class="anchor" href="#RRpapers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Papers under Revision to Resubmit</h2>
@@ -120,7 +200,7 @@
 
     <hr>                    
     -->
-            
+
     <h1><b>Publications</b><font size=3> (<sup>1</sup>Co-first Author)</font></h1> 
     <br>
     <h3>2025</h3>
@@ -173,7 +253,7 @@
     <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2020.00109/full">Phenotypic Consequence of Rearranging the N Gene of RABV HEP-Flury</a> <br>  Mei M<sup>1</sup>, <b>Long T<sup>1</sup></b>, Zhang Q, Zhao J, Tian Q, Peng J, Luo J, Jiang H, Lin Y, Lin Z, Guo X. 2019. <i>Viruses</i> [Article] <br><button class="accordion">
     Abstract
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Nucleoprotein (N) is a key element in rabies virus (RABV) replication. To further investigate the effect of N on RABV, we manipulated an infectious cDNA clone of the RABV HEP-Flury to rearrange the N gene from its wild-type position of 1 (N-P-M-G-L) to 2 (P-N-M-G-L), 3 (P-M-N-G-L), or 4 (P-M-G-N-L), using an approach that left the viral nucleotide sequence unaltered. Subsequently, viable viruses were recovered from each of the rearranged cDNA and examined for their gene expression levels, growth kinetics in cell culture, pathogenicity in suckling mice and protection in mice. The results showed that gene rearrangement decreased N mRNA transcription and vRNA replication. As a result, all viruses with rearranged genomes showed worse replication than that of rHEP-Flury in NA cells at a MOI of 0.01, but equivalent or slightly better replication levels at a MOI of 3. Consequently, the lethality in suckling mice infected with N4 was clearly attenuated compared with rHEP-Flury. However, the protection to mice was not enhanced. This study not only gives us insight into the understanding of the phenotype of RABV N gene rearrangement, but also helps with rabies vaccine candidate construction. </p></div>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Nucleoprotein (N) is a key element in rabies virus (RABV) replication. To further investigate the effect of N on RABV, we manipulated an infectious cDNA clone of the RABV HEP-Flury to rearrange the N gene from its wild-type position of 1 (N-P-M-G-L) to 2 (P-N-M-G-L), 3 (P-M-N-G-L), or 4 (P-M-G-N-L), using an approach that left the viral nucleotide sequence unaltered. Subsequently, viable viruses were recovered from each of the rearranged cDNA and examined for their gene expression levels, growth kinetics in cell culture, pathogenicity in suckling mice and protection in mice. The results showed that gene rearrangement decreased N mRNA transcription and vRNA replication. As a result, all viruses with rearranged genomes showed worse replication than that of rHEP-Flury in NA cells at a MOI of 0.01, but equivalent or slightly better replication levels at a MOI of 3. Consequently, the lethality in suckling mice infected with N4 was clearly attenuated compared with rHEP-Flury. However, the protection to mice was not enhanced. This study not only gives us insight into the understanding of the phenotype of RABV and N gene rearrangement, but also helps with rabies vaccine candidate construction. </p></div>
     <br>    
     <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.02093/full">Non-human Primate Papillomaviruses Share Similar Evolutionary Histories and Niche Adaptation as the Human Counterparts</a> <br>  Chen Z<sup>1</sup>, <b>Long T<sup>1</sup></b>, Wong PY, Ho WCS, Burk RD, Chan PKS. 2019. <i>Frontiers in Microbiology</i> [Article] <br><button class="accordion">
     Abstract
@@ -208,7 +288,7 @@
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Both rabies virus (RABV) and canine parvovirus (CPV) cause lethal diseases in dogs. In this study, both high egg passage Flury (HEP-Flury) strains of RABV and recombinant RABV carrying double RABV glycoprotein (G) gene were used to express the CPV virion protein 2 (VP2) gene, and were designated rHEP-VP2 and, rHEP-dG-VP2 respectively. The two recombinant RABVs maintained optimal virus titration according to their viral growth kinetics assay compared with the parental strain HEP-Flury. Western blotting indicated that G protein and VP2 were expressed in vitro. The expression of VP2 in Crandell feline kidney cells post-infection by rHEP-VP2 and rHEP-dG-VP2 was confirmed by indirect immunofluorescence assay with antibody against VP2. Immunogenicity of recombinant rabies viruses was tested in Kunming mice. Both rHEP-VP2 and rHEP-dG-VP2 induced high levels of rabies antibody compared with HEP-Flury. Mice immunized with rHEP-VP2 and rHEP-dG-VP2 both had a high level of antibodies against VP2, which can protect against CPV infection. A challenge experiment indicated that more than 80% mice immunized with recombinant RABVs survived after infection of challenge virus standard 24 (CVS-24). Together, this study showed that recombinant RABVs expressing VP2 induced protective immune responses to RABV and CPV. Therefore, rHEP-VP2 and rHEP-dG-VP2 might be potential combined vaccines for RABV and CPV. </p></div>
     <br>
-          
+
       </section>
     </div>
     <script src="javascripts/scale.fix.js"></script>

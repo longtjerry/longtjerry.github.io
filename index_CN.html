@@ -78,22 +78,86 @@
         flex-wrap: wrap;
         justify-content: space-between;
       }
+      /* 头像样式 - 新增 */
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                /* 禁止保存图片相关 */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;  /* 阻止鼠标事件 */
+      }
+         /* 主页图片边框样式 - 新增 */
+      .guidance {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #e0e0e0;        /* 浅灰色边框 */
+        border-radius: 12px;               /* 圆角 */
+        padding: 8px;                      /* 内边距 */
+        background-color: #fff;            /* 白色背景 */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);  /* 轻微阴影 */
+        margin-bottom: 20px;               /* 下方间距 */
+        transition: all 0.3s ease;         /* 平滑过渡 */
+           /* 禁止保存图片相关 */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;  /* 阻止鼠标事件 */
+      }
+       .img-container {
+        position: relative;
+        display: inline-block;
+      }
+         .img-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 10;
+      }
+
+      /* 全局禁止选中文本和图片 */
+      body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* 允许选中文本区域（可选） */
+      section p, section h2, section a {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
     </style>
   </head>
     
   <body>
     <div class="wrapper">
       <header>
+          <img src="profile.jpg" alt="Teng LONG" class="profile-photo">
           <h1>龍 騰 博士</h1>
           <p><font size=2><i class="fa-solid fa-map-pin"></i> 中國香港</font></p>
         <p>病毒學研究員<br><a href="https://www.hku.hk/">香港大學(HKU)</a></p>
-        <p>研究員 <br><a href="https://www.c2i.hk/">免疫與感染研究中心(C2I)</a></p><br><br>
+        <p>研究員 <br><a href="https://www.c2i.hk/">免疫與感染研究中心(C2I)</a></p><br>
     <h3><a href="https://longtjerry.github.io/">Home</a></h3>
     <h3><a href="https://longtjerry.github.io/index_CN">主頁</a></h3>
     <h3><a href="https://longtjerry.github.io/CV.html">About me</a></h3>
     <h3><a href="https://longtjerry.github.io/research.html">Research</a></h3> 
     <h3><a href="https://longtjerry.github.io/publications.html">Publications</a></h3>
-    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br><br>
+    <h3><a href="https://longtjerry.github.io/collaborations.html">Collaborations</a></h3><br>
     
         
     <b>社交</b><br>
@@ -111,9 +175,11 @@
       </header>
         
       <section>
-      <img src="profile.jpg" height="100%" width="auto" alt="Teng LONG">
+      <img src="work%20flow.png" alt="workflow" class="guidance">
       <h2>歡迎蒞臨!</h2>
-          <p>我目前是<a href="https://www.hku.hk/c_index.html">香港大學</a><a href="https://sph.hku.hk/zh-HK/">公共衛生學院</a>的病毒學博士後研究員，同時也是<a href="https://www.c2i.hk/">免疫與感染研究中心</a>的研究員。我于2021年5月在<a href="https://www.cuhk.edu.hk/chinese/">香港中文大學</a>獲得<a href="https://mic.cuhk.edu.hk/">微生物學</a>博士學位。</p><p>我的研究興趣集中在病毒跨物種傳播、動物源性疾病的起源和新發流行病等主題，包括但不局限於病毒基因組學與進化、病毒與宿主的相互作用的分子機製、病毒致病機製等。我的研究成果發表在《PloS Pathogens》、《Nature Communications》、《Frontiers in Microbiology》、《Viruses》等領先期刊上。我擅長将干實驗和湿實驗結合運用在病毒學研究中。我还流利掌握普通話、廣東話和英語。</p><p>歡迎擁有不同學科背景的科學家前來合作與交流。</p>
+          <p>我目前是<a href="https://www.hku.hk/c_index.html">香港大學</a><a href="https://sph.hku.hk/zh-HK/">公共衛生學院</a>的病毒學博士後研究員，同時也是<a href="https://www.c2i.hk/">免疫與感染研究中心</a>的研究員。我于2021年5月在<a href="https://www.cuhk.edu.hk/chinese/">香港中文大學</a>獲得<a href="https://mic.cuhk.edu.hk/">微生物學</a>博士學位。</p>
+          <p>我的研究整合了電腦模擬方法（生物信息學、計算基因組學）與體外／體內模型，以分析病毒演化、揭示宿主反應，並為公共衛生策略提供依據。最終目標是協助開發基於紮實科學基礎、優化且精準的治療方法。我的研究成果發表在《PloS Pathogens》、《Nature Communications》、《Frontiers in Microbiology》、《Viruses》等領先期刊上。</p>
+          <p>我熱衷於將實驗室發現轉化為實際應用——在學術界、產業界和臨床應用之間搭建橋樑。歡迎擁有不同學科背景的科學家前來合作與交流。</p>
           
       </section>
     </div>
